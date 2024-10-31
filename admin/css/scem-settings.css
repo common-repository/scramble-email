@@ -1,0 +1,119 @@
+.scem-wrap table { max-width: 500px; }
+.scem-wrap th { display: none; }
+.scem-wrap td { padding: 0; }
+
+.scem-settings-wrapper { margin-bottom: 20px; }
+.scem-settings-wrapper * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.scem-settings-head {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		 -ms-flex-align: center;
+		 		align-items: center;
+}
+
+.scem-label {
+	margin-right: 2em;
+}
+
+.scem-switch {
+  position: relative;
+	display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.scem-switch__input {
+	position: absolute;
+	padding: 0;
+	opacity: 0;
+	outline: none;
+}
+
+
+.scem-switch__label {
+	display: inline-block;
+	padding: .75em .5em .75em .75em;
+	vertical-align: top;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 1.5;
+	color: #666;
+	background-color: #ddd;
+  cursor: pointer;
+	border-radius: 2em;
+	transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.scem-switch__label::before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: .5em;
+	bottom: .5em;
+	left: .5em;
+	width: 2em;
+	background-color: #fff;
+	border-radius: 1em;
+	pointer-events: none;
+	box-shadow: 0 .1429em .2143em rgba(43,43,43,.2), 0 .3572em .3572em rgba(43,43,43,.1);
+	transition: left .2s ease-in-out;
+}
+.scem-switch__label::after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: .8em;
+	bottom: .8em;
+	left: .8em;
+	width: 1.4em;
+	background-color: #999;
+	border-radius: .7em;
+	pointer-events: none;
+	transition: left .2s ease-in-out, opacity .2s ease-in-out;
+	opacity: 0;
+}
+
+.scem-switch__txt {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	min-width: 2.2em;
+	opacity: 1;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .2s ease-in-out;
+	text-align: center;
+}
+
+.scem-switch__input:focus + .scem-switch__label::after,
+.scem-switch__input:active + .scem-switch__label::after {
+	opacity: 1;
+}
+
+
+.scem-switch__input:checked + .scem-switch__label {
+	background-color: #6ad500;
+	color: #fff;
+}
+.scem-switch__input:checked + .scem-switch__label::before {
+	left: calc(100% - 2.5em);
+}
+.scem-switch__input:checked + .scem-switch__label::after {
+	left: calc(100% - 2.2em);
+}
+
+.scem-switch__input:checked + .scem-switch__label .scem-switch__txt_yes {
+	opacity: 1;
+}
+.scem-switch__input:not(:checked) + .scem-switch__label .scem-switch__txt_no {
+	opacity: 1;
+}

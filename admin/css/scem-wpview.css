@@ -1,0 +1,21 @@
+.wpview.wpview-wrap[data-wpview-type="scem"] {
+	display: inline-block;
+	width: auto;
+}
+
+.scem-view {
+	padding: 10px;
+	background-color: rgba(46,46,46,.03);
+}
+.scem-view::before {
+	content: " ";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	transform: translate(0, 2px);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../images/scramble-email-icon.png);
+}
